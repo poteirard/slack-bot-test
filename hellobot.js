@@ -5,9 +5,9 @@ module.exports = function (req, res, next) {
   };
 
   // avoid infinite loop
- // if (userName !== 'slackbot') {
+ if (userName !== 'slackbot') {
     return res.status(200).json(botPayload);
-  //} else {
-  //  return res.status(200).end();
-  //}
+ } else {
+    return res.status(200).end();
+ }
 }
