@@ -3,6 +3,7 @@ module.exports = function (req, res, next) {
   var botPayload = {
     text : 'Hello, ' + userName + '!'
   };
+console.log(req.body);
 
   // avoid infinite loop
  if (userName !== 'slackbot') {
